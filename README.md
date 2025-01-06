@@ -93,8 +93,3 @@ The backend server will now be live at `http://localhost:8000`, and the frontend
 ## License
 
 This project is open-source under the MIT License. See the LICENSE file for details.
-
-```plaintext
-
-This formatted README provides a clear structure with proper Markdown syntax, including headers, code blocks, and lists. It should render correctly on platforms that support Markdown, such as GitHub.
-```
