@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Application README
 
-## Getting Started
+Welcome to the Chat Application! This app allows users to create and manage chat sessions with text, image, and audio support, as well as provides a seamless chat experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Real-time Messaging**: Send and receive text, image, and audio messages in real time.
+- **Dynamic UI**: User-friendly interface for creating new chat sessions and managing existing ones.
+- **Message Types**: Send images and audio clips along with text.
+- **Typing Notifications**: Shows when another user is typing.
+
+## Installation and Setup
+
+### Prerequisites
+
+1. **Docker**: You'll need Docker installed on your system. If you don't have Docker installed, you can get it from the [official Docker website](https://www.docker.com/products/docker-desktop).
+
+2. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build and Run with Docker
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Build the Docker image**: Once you've cloned the repository, build the Docker image for the backend:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```shellscript
+docker build -t chat-backend .
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+2. **Run the Docker container**: After building the image, you can run the container:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```shellscript
+docker run -p 8000:8000 chat-backend
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This will start the backend server, which will be available at `http://localhost:8000`.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Run the Frontend Locally
+
+1. **Install dependencies**: Make sure you have the required dependencies installed in your frontend project folder.
+
+```shellscript
+npm install
+```
+
+
+2. **Start the development server**: Run the frontend locally using Vite:
+
+```shellscript
+npm run dev
+```
+
+
+3. **Access the application**: Open `http://localhost:3000` in your browser to view the frontend of the chat application.
+
+
+## Backend Repository
+
+To fully run the application, the backend code for the chat app should be started. We are using the following backend project:
+
+[Frontend Technical Challenge Backend](https://github.com/SailerAI/frontend-technical-challenge)
+
+Follow these instructions to run the backend:
+
+1. Clone the repository:
+
+```shellscript
+git clone https://github.com/SailerAI/frontend-technical-challenge
+cd frontend-technical-challenge
+```
+
+2. Build and run the backend Docker container:
+
+```shellscript
+docker build -t chat-backend .
+docker run -p 8000:8000 chat-backend
+```
+
+The backend server will now be live at `http://localhost:8000`, and the frontend can interact with it for full functionality.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Submit a pull request with a description of the changes you have made.
+
+## License
+
+This project is open-source under the MIT License. See the LICENSE file for details.
+
+```plaintext
+
+This formatted README provides a clear structure with proper Markdown syntax, including headers, code blocks, and lists. It should render correctly on platforms that support Markdown, such as GitHub.
+```
