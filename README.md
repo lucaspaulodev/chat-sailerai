@@ -19,7 +19,6 @@ Welcome to the Chat Application! This app allows users to create and manage chat
    ```bash
    git clone <repository-url>
    cd <repository-folder>
-```
 
 ### Build and Run with Docker
 
@@ -29,7 +28,6 @@ Welcome to the Chat Application! This app allows users to create and manage chat
 docker build -t chat-backend .
 ```
 
-
 2. **Run the Docker container**: After building the image, you can run the container:
 
 ```shellscript
@@ -37,9 +35,6 @@ docker run -p 8000:8000 chat-backend
 ```
 
 This will start the backend server, which will be available at `http://localhost:8000`.
-
-
-
 
 ### Run the Frontend Locally
 
@@ -50,15 +45,13 @@ npm install
 ```
 
 
-2. **Start the development server**: Run the frontend locally using Vite:
+2. **Start the development server**: Run the frontend locally:
 
 ```shellscript
 npm run dev
 ```
 
-
 3. **Access the application**: Open `http://localhost:3000` in your browser to view the frontend of the chat application.
-
 
 ## Backend Repository
 
